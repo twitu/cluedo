@@ -1,0 +1,58 @@
+{
+    "builtinSolverConfigs": [
+        {
+            "additionalCompilerCommandline": "",
+            "additionalData": "",
+            "clearOutputWindow": false,
+            "compressSolutionOutput": 100,
+            "defaultBehavior": false,
+            "extraOptions": {
+                "-a-d": "2",
+                "-c-d": "8",
+                "-decay": "0.99",
+                "-fail": "0",
+                "-node": "0",
+                "-nogoods": "false",
+                "-nogoods-limit": "128",
+                "-restart": "none",
+                "-restart-base": "1.5",
+                "-restart-scale": "250"
+            },
+            "flatteningStats": false,
+            "freeSearch": false,
+            "id": "org.gecode.gecode",
+            "nThreads": 1,
+            "name": "Gecode 6.1.1",
+            "optimizationLevel": 1,
+            "outputTiming": false,
+            "printIntermediate": true,
+            "runSolutionChecker": true,
+            "solverFlags": "",
+            "solvingStats": true,
+            "stopAfter": 0,
+            "timeLimit": 0,
+            "useExtraOptions": false,
+            "verboseFlattening": false,
+            "verboseSolving": false,
+            "version": "6.1.1"
+        }
+    ],
+    "openFiles": [
+        "cluedo.mzn",
+        "cluedo_0.dzn",
+        "cluedo_1.dzn",
+        "cluedo_2.dzn"
+    ],
+    "openTab": 0,
+    "projectFiles": [
+        "cluedo.mzn",
+        "cluedo_0.dzn",
+        "cluedo_1.dzn",
+        "cluedo_2.dzn"
+    ],
+    "projectSolverConfigs": [
+    ],
+    "selectedBuiltinConfigId": "org.gecode.gecode",
+    "selectedBuiltinConfigVersion": "6.1.1",
+    "version": 105
+}

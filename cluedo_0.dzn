@@ -1,0 +1,47 @@
+% from https://github.com/therealsaumil/cluedo-game/blob/master/sample_games/game3_commands.txt
+
+CARDS = {
+         SCARLET, GREEN, MUSTARD, PLUM, PEACOCK, WHITE,  % charachters
+         CANDLESTICK, DAGGER, LEAD_PIPE, REVOLVER, ROPE, SPANNER,  % weapons
+         KITCHEN, BALLROOM, CONSERVATORY, BILLIARD_ROOM, LIBRARY, STUDY, HALL, LOUNGE, DINING_ROOM  % rooms
+        };
+
+CHARACHTERS = { SCARLET, GREEN, MUSTARD, PLUM, PEACOCK, WHITE };
+WEAPONS = { CANDLESTICK, DAGGER, LEAD_PIPE, REVOLVER, ROPE, SPANNER };
+ROOMS = { KITCHEN, BALLROOM, CONSERVATORY, BILLIARD_ROOM, LIBRARY, STUDY, HALL, LOUNGE, DINING_ROOM };
+
+SUGGESTIONS = 1..13;
+suggestion = [
+              { PLUM, ROPE, LOUNGE },
+              { PEACOCK, SPANNER, CONSERVATORY },
+              { WHITE, DAGGER, CONSERVATORY },
+              { PLUM, REVOLVER, LOUNGE },
+              { PEACOCK, SPANNER, LOUNGE },
+              { PLUM, DAGGER, CONSERVATORY },
+              { PLUM, SPANNER, CONSERVATORY },
+              { SCARLET, ROPE, DINING_ROOM },
+              { WHITE, SPANNER, CONSERVATORY },
+              { GREEN, ROPE, BILLIARD_ROOM },
+              { MUSTARD, ROPE, CONSERVATORY },
+              { GREEN, LEAD_PIPE, DINING_ROOM },
+              { GREEN, LEAD_PIPE, CONSERVATORY }
+             ];
+
+PLAYERS = 1..4;
+answer = [| 0,2,0,0
+          | 1,0,1,1
+          | 2,0,0,1
+          | 1,2,0,0
+          | 0,2,0,0
+          | 1,0,1,1
+          | 1,2,0,1
+          | 2,0,0,0
+          | 0,2,0,0
+          | 1,0,1,1
+          | 1,2,0,1
+          | 2,0,0,0
+          | 0,1,1,1 |];
+
+hand_size = [5, 5, 4, 4];
+
+reveal = { BILLIARD_ROOM, SPANNER, ROPE, PLUM, PEACOCK };

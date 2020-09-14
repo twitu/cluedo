@@ -1,0 +1,80 @@
+% from https://github.com/therealsaumil/cluedo-game/blob/master/sample_games/game6_commands.txt
+
+CARDS = {
+         SCARLETT, GREEN, MUSTARD, PLUM, PEACOCK, WHITE,  % charachters
+         CANDLESTICK, DAGGER, LEAD_PIPE, REVOLVER, ROPE, SPANNER,  % weapons
+         KITCHEN, BALLROOM, CONSERVATORY, BILLIARD_ROOM, LIBRARY, STUDY, HALL, LOUNGE, DINING_ROOM  % rooms
+        };
+
+CHARACHTERS = { SCARLETT, GREEN, MUSTARD, PLUM, PEACOCK, WHITE };
+WEAPONS = { CANDLESTICK, DAGGER, LEAD_PIPE, REVOLVER, ROPE, SPANNER };
+ROOMS = { KITCHEN, BALLROOM, CONSERVATORY, BILLIARD_ROOM, LIBRARY, STUDY, HALL, LOUNGE, DINING_ROOM };
+
+SUGGESTIONS = 1..30;
+suggestion = [
+              { MUSTARD, ROPE, BILLIARD_ROOM },
+              { PLUM, REVOLVER, LIBRARY },
+              { SCARLETT, SPANNER, HALL },
+              { GREEN, DAGGER, LOUNGE },
+              { SCARLETT, REVOLVER, BALLROOM },
+              { MUSTARD, ROPE, DINING_ROOM },
+              { SCARLETT, REVOLVER, STUDY },
+              { PEACOCK, ROPE, CONSERVATORY },
+              { MUSTARD, ROPE, BALLROOM },
+              { SCARLETT, SPANNER, DINING_ROOM },
+              { WHITE, SPANNER, LOUNGE },
+              { PLUM, REVOLVER, CONSERVATORY },
+              { WHITE, SPANNER, DINING_ROOM },
+              { GREEN, SPANNER, DINING_ROOM },
+              { GREEN, LEAD_PIPE, HALL },
+              { GREEN, REVOLVER, DINING_ROOM },
+              { PLUM, SPANNER, BALLROOM },
+              { PLUM, CANDLESTICK, CONSERVATORY },
+              { WHITE, REVOLVER, LOUNGE },
+              { PEACOCK, REVOLVER, LOUNGE },
+              { WHITE, DAGGER, LOUNGE },
+              { WHITE, SPANNER, KITCHEN },
+              { WHITE, REVOLVER, CONSERVATORY },
+              { WHITE, REVOLVER, DINING_ROOM },
+              { WHITE, REVOLVER, HALL },
+              { SCARLETT, ROPE, STUDY },
+              { WHITE, ROPE, LIBRARY },
+              { PEACOCK, ROPE, LIBRARY },
+              { WHITE, REVOLVER, BILLIARD_ROOM },
+              { WHITE, REVOLVER, LIBRARY },
+             ];
+
+PLAYERS = 1..5;
+hand_size = [3, 3, 4, 4, 4];
+answer = [| 0, 1, 2, 0, 0
+          | 0, 2, 0, 0, 0
+          | 0, 0, 2, 0, 0
+          | 0, 0, 0, 1, 2
+          | 1, 1, 2, 0, 1
+          | 2, 0, 0, 0, 0
+          | 0, 1, 2, 0, 0
+          | 0, 0, 0, 2, 0
+          | 2, 0, 0, 0, 1
+          | 1, 1, 2, 0, 0
+          | 0, 1, 2, 0, 0
+          | 0, 0, 1, 1, 2
+          | 0, 0, 0, 2, 0
+          | 1, 2, 0, 0, 1
+          | 2, 0, 0, 0, 0
+          | 0, 2, 0, 0, 0
+          | 0, 0, 0, 2, 0
+          | 0, 0, 0, 0, 2
+          | 1, 1, 2, 0, 0
+          | 0, 1, 2, 0, 0
+          | 0, 0, 2, 0, 0
+          | 1, 2, 0, 1, 1
+          | 2, 0, 0, 0, 0
+          | 0, 1, 1, 2, 0
+          | 2, 0, 1, 1, 1
+          | 0, 0, 0, 1, 2
+          | 1, 2, 0, 0, 1
+          | 1, 2, 0, 0, 0
+          | 0, 1, 1, 1, 1
+          | 1, 0, 1, 1, 1 |];
+
+reveal = { SCARLETT, ROPE, SPANNER, LOUNGE };

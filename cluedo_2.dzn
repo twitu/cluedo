@@ -1,0 +1,68 @@
+% from https://github.com/therealsaumil/cluedo-game/blob/master/sample_games/game7_commands.txt
+
+CARDS = {
+         SCARLETT, GREEN, MUSTARD, PLUM, PEACOCK, WHITE,  % charachters
+         CANDLESTICK, DAGGER, LEAD_PIPE, REVOLVER, ROPE, SPANNER,  % weapons
+         KITCHEN, BALLROOM, CONSERVATORY, BILLIARD_ROOM, LIBRARY, STUDY, HALL, LOUNGE, DINING_ROOM  % rooms
+        };
+
+CHARACHTERS = { SCARLETT, GREEN, MUSTARD, PLUM, PEACOCK, WHITE };
+WEAPONS = { CANDLESTICK, DAGGER, LEAD_PIPE, REVOLVER, ROPE, SPANNER };
+ROOMS = { KITCHEN, BALLROOM, CONSERVATORY, BILLIARD_ROOM, LIBRARY, STUDY, HALL, LOUNGE, DINING_ROOM };
+
+SUGGESTIONS = 1..24;
+suggestion = [
+              { GREEN, LEAD_PIPE, BALLROOM },
+              { PLUM, LEAD_PIPE, DINING_ROOM },
+              { GREEN, SPANNER, BILLIARD_ROOM },
+              { GREEN, SPANNER, BALLROOM },
+              { WHITE, LEAD_PIPE, DINING_ROOM },
+              { GREEN, DAGGER, LOUNGE },
+              { WHITE, DAGGER, DINING_ROOM },
+              { GREEN, SPANNER, LIBRARY },
+              { PEACOCK, LEAD_PIPE, BALLROOM },
+              { PEACOCK, LEAD_PIPE, DINING_ROOM },
+              { SCARLETT, LEAD_PIPE, HALL },
+              { PLUM, LEAD_PIPE, DINING_ROOM },
+              { GREEN, REVOLVER, HALL },
+              { WHITE, CANDLESTICK, DINING_ROOM },
+              { PLUM, LEAD_PIPE, KITCHEN },
+              { PLUM, DAGGER, BALLROOM },
+              { GREEN, REVOLVER, BALLROOM },
+              { MUSTARD, LEAD_PIPE, DINING_ROOM },
+              { MUSTARD, CANDLESTICK, DINING_ROOM },
+              { MUSTARD, LEAD_PIPE, KITCHEN },
+              { MUSTARD, SPANNER, BILLIARD_ROOM },
+              { PEACOCK, LEAD_PIPE, BALLROOM },
+              { SCARLETT, DAGGER, DINING_ROOM },
+              { PEACOCK, REVOLVER, STUDY },
+             ];
+
+PLAYERS = 1..5;
+hand_size = [3, 3, 4, 4, 4];
+answer = [| 0, 2, 0, 0, 0
+          | 0, 0, 0, 2, 0
+          | 0, 0, 0, 0, 2
+          | 1, 1, 2, 0, 0
+          | 0, 1, 1, 2, 0
+          | 0, 0, 1, 2, 0
+          | 0, 0, 0, 2, 0
+          | 2, 0, 0, 0, 1
+          | 2, 0, 0, 0, 0
+          | 0, 1, 2, 0, 0
+          | 0, 0, 1, 2, 0
+          | 2, 0, 0, 1, 1
+          | 1, 1, 2, 0, 1
+          | 2, 0, 0, 0, 0
+          | 0, 1, 1, 1, 2
+          | 0, 0, 1, 1, 2
+          | 0, 0, 0, 1, 2
+          | 1, 1, 1, 0, 1
+          | 2, 0, 0, 0, 0
+          | 0, 1, 1, 2, 0
+          | 0, 0, 2, 0, 0
+          | 2, 0, 0, 1, 1
+          | 1, 1, 2, 0, 1
+          | 2, 0, 1, 1, 1 |];
+
+reveal = { PLUM, BILLIARD_ROOM, SPANNER, STUDY };
